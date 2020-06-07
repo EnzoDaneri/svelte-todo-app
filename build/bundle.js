@@ -736,7 +736,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (133:0) {#each filteredTodos as todo}
+    // (138:0) {#each filteredTodos as todo}
     function create_each_block(ctx) {
     	let div;
     	let current;
@@ -787,29 +787,31 @@ var app = (function () {
 
     function create_fragment$1(ctx) {
     	let div6;
+    	let i;
+    	let t0;
     	let h2;
-    	let t1;
-    	let input0;
     	let t2;
+    	let input0;
     	let t3;
+    	let t4;
     	let div2;
     	let div0;
     	let label;
     	let input1;
-    	let t4;
     	let t5;
-    	let div1;
     	let t6;
+    	let div1;
     	let t7;
     	let t8;
+    	let t9;
     	let div5;
     	let div3;
     	let button0;
-    	let t10;
+    	let t11;
     	let button1;
-    	let t12;
+    	let t13;
     	let button2;
-    	let t14;
+    	let t15;
     	let div4;
     	let button3;
     	let current;
@@ -829,88 +831,93 @@ var app = (function () {
     	return {
     		c() {
     			div6 = element("div");
+    			i = element("i");
+    			t0 = space();
     			h2 = element("h2");
     			h2.textContent = "Svelte Todo App";
-    			t1 = space();
-    			input0 = element("input");
     			t2 = space();
+    			input0 = element("input");
+    			t3 = space();
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t3 = space();
+    			t4 = space();
     			div2 = element("div");
     			div0 = element("div");
     			label = element("label");
     			input1 = element("input");
-    			t4 = text("Check All");
-    			t5 = space();
+    			t5 = text("Check All");
+    			t6 = space();
     			div1 = element("div");
-    			t6 = text(/*todosRemaining*/ ctx[2]);
-    			t7 = text(" items left");
-    			t8 = space();
+    			t7 = text(/*todosRemaining*/ ctx[2]);
+    			t8 = text(" items left");
+    			t9 = space();
     			div5 = element("div");
     			div3 = element("div");
     			button0 = element("button");
     			button0.textContent = "All";
-    			t10 = space();
+    			t11 = space();
     			button1 = element("button");
     			button1.textContent = "Active";
-    			t12 = space();
+    			t13 = space();
     			button2 = element("button");
     			button2.textContent = "Completed";
-    			t14 = space();
+    			t15 = space();
     			div4 = element("div");
     			button3 = element("button");
     			button3.textContent = "Clear Completed";
+    			attr(i, "class", "fas fa-tasks svelte-f5ro9d");
     			attr(input0, "type", "text");
-    			attr(input0, "class", "todo-input svelte-120wb0l");
+    			attr(input0, "class", "todo-input svelte-f5ro9d");
     			attr(input0, "placeholder", "Insert todo item...");
-    			attr(input1, "class", "inner-container-input svelte-120wb0l");
+    			attr(input1, "class", "inner-container-input svelte-f5ro9d");
     			attr(input1, "type", "checkbox");
-    			attr(div2, "class", "inner-container svelte-120wb0l");
-    			attr(button0, "class", "svelte-120wb0l");
+    			attr(div2, "class", "inner-container svelte-f5ro9d");
+    			attr(button0, "class", "svelte-f5ro9d");
     			toggle_class(button0, "active", /*currentFilter*/ ctx[1] === "all");
-    			attr(button1, "class", "svelte-120wb0l");
+    			attr(button1, "class", "svelte-f5ro9d");
     			toggle_class(button1, "active", /*currentFilter*/ ctx[1] === "active");
-    			attr(button2, "class", "svelte-120wb0l");
+    			attr(button2, "class", "svelte-f5ro9d");
     			toggle_class(button2, "active", /*currentFilter*/ ctx[1] === "completed");
-    			attr(button3, "class", "svelte-120wb0l");
-    			attr(div5, "class", "inner-container svelte-120wb0l");
-    			attr(div6, "class", "container svelte-120wb0l");
+    			attr(button3, "class", "svelte-f5ro9d");
+    			attr(div5, "class", "inner-container svelte-f5ro9d");
+    			attr(div6, "class", "container svelte-f5ro9d");
     		},
     		m(target, anchor) {
     			insert(target, div6, anchor);
+    			append(div6, i);
+    			append(div6, t0);
     			append(div6, h2);
-    			append(div6, t1);
+    			append(div6, t2);
     			append(div6, input0);
     			set_input_value(input0, /*newTodoTitle*/ ctx[0]);
-    			append(div6, t2);
+    			append(div6, t3);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(div6, null);
     			}
 
-    			append(div6, t3);
+    			append(div6, t4);
     			append(div6, div2);
     			append(div2, div0);
     			append(div0, label);
     			append(label, input1);
-    			append(label, t4);
-    			append(div2, t5);
+    			append(label, t5);
+    			append(div2, t6);
     			append(div2, div1);
-    			append(div1, t6);
     			append(div1, t7);
-    			append(div6, t8);
+    			append(div1, t8);
+    			append(div6, t9);
     			append(div6, div5);
     			append(div5, div3);
     			append(div3, button0);
-    			append(div3, t10);
+    			append(div3, t11);
     			append(div3, button1);
-    			append(div3, t12);
+    			append(div3, t13);
     			append(div3, button2);
-    			append(div5, t14);
+    			append(div5, t15);
     			append(div5, div4);
     			append(div4, button3);
     			current = true;
@@ -948,7 +955,7 @@ var app = (function () {
     						each_blocks[i] = create_each_block(child_ctx);
     						each_blocks[i].c();
     						transition_in(each_blocks[i], 1);
-    						each_blocks[i].m(div6, t3);
+    						each_blocks[i].m(div6, t4);
     					}
     				}
 
@@ -961,7 +968,7 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (!current || dirty & /*todosRemaining*/ 4) set_data(t6, /*todosRemaining*/ ctx[2]);
+    			if (!current || dirty & /*todosRemaining*/ 4) set_data(t7, /*todosRemaining*/ ctx[2]);
 
     			if (dirty & /*currentFilter*/ 2) {
     				toggle_class(button0, "active", /*currentFilter*/ ctx[1] === "all");
